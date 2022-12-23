@@ -45,7 +45,7 @@ function App() {
     <style.Container>
     <div className="App">
       <GlobalStyles/>
-      <style.HeaderContainerH1>GDS-TECH</style.HeaderContainerH1>
+      <style.HeaderContainerH1>GDS-TEC</style.HeaderContainerH1>
       <label htmlFor='text-id'>Indique uma data: </label>
       <input type='text' id='text-id' value={textInput} onChange={(event) => setTextInput(event.target.value)}/>
       <style.ButtonFilterContainer type='button' onClick={() => handleClickFilter()}>Filtrar Data</style.ButtonFilterContainer>
