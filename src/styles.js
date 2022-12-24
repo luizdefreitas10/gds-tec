@@ -19,6 +19,12 @@ input {
 }
 `;
 
+export const InputStyleContainer = styled.input`
+ :hover {
+    
+  }
+`;
+
 export const HeaderContainerH1 = styled.h1`
   margin: 5px;
 `;
