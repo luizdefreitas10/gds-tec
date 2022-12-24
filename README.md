@@ -1,4 +1,4 @@
-Veja o app funcionando: https://https://gds-tec.vercel.app/
+Veja o app funcionando: https://gds-tec.vercel.app/
 
 # Getting Started with Create React App
 
