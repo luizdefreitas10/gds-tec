@@ -12,7 +12,8 @@ function App() {
   const [textInput, setTextInput] = useState('');
   const [filteredData, setFilteredData] = useState('');
 
-  const notify = () => toast.error("Data não encontrada");
+  const notifyError = () => toast.error("Data não encontrada!");
+  const notifySuccess = () => toast.success("Data disponível!");
 
   useEffect(() => {
     // const setDataState = fetchApi().then((response) => response.json()).then((d) => d[0].data);
@@ -28,15 +29,16 @@ function App() {
     test();
   }, []);
 
-  const handleClickFilter = () => {
-    // event.preventDefault();
-    console.log(dataState);
+  const handleClickFilter = (event) => {
+    event.preventDefault();
+    // console.log(dataState);
     const dataFilter = dataState.filter((d) => d.data === textInput)[0];
-    console.log(dataFilter);
+    // console.log(dataFilter);
     setTextInput('');
+    if (dataFilter) notifySuccess();
     if (dataFilter === undefined) {
       setFilteredData('');
-      notify();
+      notifyError();
     }
     setFilteredData(dataFilter.data);
   };
@@ -48,10 +50,12 @@ function App() {
       <style.HeaderContainerH1>GDS-TEC</style.HeaderContainerH1>
       <label htmlFor='text-id'>Indique uma data: </label>
       <input type='text' id='text-id' value={textInput} onChange={(event) => setTextInput(event.target.value)}/>
-      <style.ButtonFilterContainer type='button' onClick={() => handleClickFilter()}>Filtrar Data</style.ButtonFilterContainer>
-      <div>{[filteredData].map((d, index) => (
-        <h1 key={index}>{d}</h1>
-      ))}</div>
+      <style.ButtonFilterContainer type='submit' onClick={(event) => handleClickFilter(event)}>Filtrar Data</style.ButtonFilterContainer>
+      { filteredData ? (
+        <div>{[filteredData].map((d, index) => (
+          <h2 key={index}>{d}</h2>
+        ))}</div>
+      ) : null }
       <ToastContainer />
     </div>
     </style.Container>

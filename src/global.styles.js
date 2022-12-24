@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
   * {
     border: 0;
     box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    color: yellow;
+    color: #dafb4c;
     height: 100vh;
     object-fit: contain;
   }

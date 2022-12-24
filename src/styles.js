@@ -11,6 +11,7 @@ gap: 1rem;
 input {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 10px;
   height: 2rem;
   width: 15rem;
@@ -24,10 +25,11 @@ export const HeaderContainerH1 = styled.h1`
 
 export const ButtonFilterContainer = styled.button`
 :hover {
-  background-color: yellow;
+  background-color: #dafb4c;
   color: black;
 }
   width: 100px;
   border-radius: 5px;
   margin: 10px;
 `;
+
